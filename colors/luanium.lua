@@ -102,7 +102,7 @@ local hl = {
     ["@keyword.type"] = {},
     ["@keyword.modifier"] = {fg=c.rurikon},
     ["@keyword.repeat"] = { fg=c.hisui, italic=true },
-    ["@keyword.return"] = {},
+    ["@keyword.return"] = { fg=c.heki, italic=true, bold=true},
     ["@keyword.debug"] = {},
     ["@keyword.exception"] = {},
     ["@keyword.conditional"] = {fg=c.chigusa, bold=true},
