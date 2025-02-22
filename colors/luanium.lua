@@ -135,15 +135,15 @@ local hl = {
     ["@markup.math"] = {},
 
     ["@markup.link"] = { fg = c.kodaimurasaki },
-    ["@markup.link.label"] = {},
-    ["@markup.link.url"] = {},
+    ["@markup.link.label"] = { fg = c.sion, italic = true },
+    ["@markup.link.url"] = { fg = c.hisui, italic = true, underline = true},
 
-    ["@markup.raw"] = {},
-    ["@markup.raw.block"] = { fg = c.gosu },
+    ["@markup.raw"] = { fg = c.namari, bg = c.aokachi},
+    ["@markup.raw.block"] = { fg = c.suzu, bg = c.aokachi },
 
-    ["@markup.list"] = {},
-    ["@markup.list.checked"] = {},
-    ["@markup.list.unchecked"] = {},
+    ["@markup.list"] = { fg = c.aoi },
+    ["@markup.list.checked"] = { fg = c.akane },
+    ["@markup.list.unchecked"] = { fg = c.murasaki },
     --diff
     ["@diff.plus"] = {},
     ["@diff.minus"] = {},
@@ -161,6 +161,15 @@ local hl = {
     --inspect
     ["@punctuation.bracket"] = { fg = c.kyofuji, italic = true },
     ["@punctuation.delimiter"] = { fg = c.soga, italic = true },
+
+    ["jsonFold"] = { fg = c.ura, italic = true },
+    ["jsonBraces"] = {fg = c.kyofuji, italic = true },
+    ["jsonKeywordMatch"] = { fg = c.ai, italic = true },
+    ["jsonKeyword"] = { fg = c.sion },
+    ["jsonStringMatch"] = { fg = c.fujinando, italic = true },
+    ["jsonString"] = { fg = c.ura },
+    ["jsonQuote"] = { fg = c.kodaimurasaki, bold = true },
+    ["jsonNoise"] = { fg = c.suzu },
 
     ["@lsp.mod.controlFlow"] = { fg = c.hisui, italic = true },
     ["@lsp.mod.mutable"] = { fg = c.ama },
@@ -183,6 +192,7 @@ local hl = {
 
     ["DiagnosticUnderlineWarn"] = { fg = c.soga, undercurl = true },
     ["DiagnosticUnderlineHint"] = { fg = c.rokusyou, undercurl = true },
+    ["DiagnosticUnderlineError"] = { fg = c.akane, undercurl = true }
 }
 local set_hl = function(tbl)
     for group, conf in pairs(tbl) do
